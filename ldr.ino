@@ -5,7 +5,7 @@ int sensorValue = 0;  // variable to store the value coming from the sensor
 void setup() {
   // declare the ledPin as an OUTPUT:
   pinMode(ledPin, OUTPUT);
-  Serial.println(9600);
+  Serial.begin(9600);
 }
 
 void loop() {
@@ -13,7 +13,7 @@ void loop() {
   sensorValue = analogRead(sensorPin);
   Serial.println(sensorValue);
   delay(1000);
-  if (sensorValue < 500) {
+  if (sensorValue > 500) {
     digitalWrite(ledPin, HIGH);
   } else {
     digitalWrite(ledPin, LOW);
