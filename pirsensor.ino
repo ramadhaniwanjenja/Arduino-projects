@@ -10,5 +10,9 @@ void setup() {
 void loop() {
   int pirValue = digitalRead(pirPin);
   Serial.println(pirValue);
-  delay(1000);
+  if (pirValue == HIGH) {
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
 }
