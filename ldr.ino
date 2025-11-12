@@ -8,14 +8,14 @@ void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(ledPin2, OUTPUT);
   pinMode(sensorPin, INPUT);
-  Serial.println(9600);
+  Serial.begin(9600);
 }
 
 void loop() {
   // read the value from the sensor:
   sensorValue = analogRead(sensorPin);
   Serial.println(sensorValue);
-  delay(1000);
+  delay(10);
 
   if (sensorValue < 500) {
     digitalWrite(ledPin, HIGH);
