@@ -1,5 +1,5 @@
 int echoPin = 10;
-int trigPin = 11;
+int trigPin = 9;
 int maxDistance = 200;
 int distance;
 
