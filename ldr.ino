@@ -1,6 +1,7 @@
 int sensorPin = A0;   // select the input pin for the potentiometer
 int ledPin = 13;      // select the pin for the LED
 int ledPin2 = 12;
+int ledPin3 = 11;
 int sensorValue = 0;  // variable to store the value coming from the sensor
 
 void setup() {
@@ -19,13 +20,11 @@ void loop() {
 
   if (sensorValue < 500) {
     digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin2, HIGH);
+    digitalWrite(ledPin3, HIGH);
   } else {
     digitalWrite(ledPin, LOW);
-  }
-
-  if (sensorValue > 500) {
-    digitalWrite(ledPin2, HIGH);
-  } else {
     digitalWrite(ledPin2, LOW);
+    digitalWrite(ledPin3, LOW);
   }
 }
